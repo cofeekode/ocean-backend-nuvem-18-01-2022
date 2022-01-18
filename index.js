@@ -2,26 +2,16 @@ const express = require("express");
 const { MongoClient, ObjectId } = require("mongodb");
 
 // const url = "mongodb://localhost:27017";
-const url = "mongodb+srv://admin:qbnSbQb2YA33-sz@cluster0.8t6ka.mongodb.net"
+const url = "mongodb+srv://admin:qbnSbQb2YA33-sz@cluster0.8t6ka.mongodb.net";
 
 const dbName = "ocean_bancodados_18_01_2022";
 
 async function main() {
     // Conexão com o Banco de Dados
-    
-    async function main() {
-    // Conexão com o Banco de Dados
 
     const client = await MongoClient.connect(url);
 
     const db = client.db(dbName);
-
-    const collection = db.collection("herois");
-
-    // Aplicação em Express
-
-    const app = express();
-
 
     const collection = db.collection("herois");
 
@@ -97,7 +87,6 @@ async function main() {
     });
 
     app.listen(process.env.PORT || 3000);
-
 }
 
 main();
