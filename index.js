@@ -70,7 +70,6 @@ async function main() {
         const id = req.params.id;
 
         const item = req.body;
-
         await collection.updateOne(
             { _id: new ObjectId(id) },
             {
